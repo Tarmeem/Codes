@@ -1,0 +1,29 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args)
+{int k=5;
+String S = "bcdfght"; int max=0;
+String str="";
+for(int j=0;j<S.length();j++)
+{    int count=0; StringBuilder st= new StringBuilder();
+  if(S.length()-j>=k)
+    {
+        for(int i=j;i<j+k;i++)
+        {
+            if(S.charAt(i)=='a'|| S.charAt(i)=='e' || S.charAt(i)=='i' || S.charAt(i)=='o' || S.charAt(i)=='u')
+            {  count++; 
+               st.append(S.charAt(i)); 
+            }
+            else 
+               st.append(S.charAt(i));
+        }  
+        if(max<count) 
+           {max=count;
+           str=st.toString();}
+           
+    }
+    else break;
+   
+} System.out.println(str.equals("")?"Not found":str);
+}
+}
